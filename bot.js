@@ -67,7 +67,7 @@ client.on('message', msg => {
 
   client.on('message', message => {
     const args = message.content.split(" ").slice(1);
-    if(message.content.startsWith('d!say')) {
+    if(message.content.startsWith('d!say') && message.guild.member(message.author).hasPermission("MANAGE_CHANNELS")) {
         message.delete()
         var saytext = args.join(" ");
         message.channel.send(saytext);
