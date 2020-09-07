@@ -65,10 +65,14 @@ client.on('message', msg => {
     }
   });
 
-  client.on('message', msg => {
-    if msg.content == 'eye':
-      msg.reply('eyes are organs of the visual system. They provide animals with vision, the ability to receive and process visual detail, as well as enabling several photo response functions that are independent of vision. Eyes detect light and convert it into electro-chemical impulses in neurons.')
-    }
-  });
+  client.on('message', message => {
+    const args = message.content.split(" ").slice(1);
+    if(message.content.startsWith('d!say')) {
+        message.delete()
+        var saytext = args.join(" ");
+        message.channel.send(saytext)
+    };
+  } )`
+
 
   client.login(process.env.BOT_TOKEN);
