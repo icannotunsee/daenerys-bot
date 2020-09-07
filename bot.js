@@ -70,9 +70,9 @@ client.on('message', msg => {
     if(message.content.startsWith('d!say')) {
         message.delete()
         var saytext = args.join(" ");
-        message.channel.send(saytext)
-    };
-  } )`
+        message.channel.send(saytext);
+    }
+  });
 
 
   client.login(process.env.BOT_TOKEN);
