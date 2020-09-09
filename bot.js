@@ -28,12 +28,6 @@ client.on('message', msg => {
   });
 
   client.on('message', msg => {
-    if (msg.content === 'beca') {
-      msg.reply('noe');
-    }
-  });
-
-  client.on('message', msg => {
     if (msg.content === 'nigga') {
       msg.reply('please do not use derogatory words.');
       msg.delete()
@@ -56,13 +50,13 @@ client.on('message', msg => {
 
   client.on('message', msg => {
     if (msg.content === 'shut up') {
-      msg.reply('noe, you.'); 
+      msg.reply('no, you.'); 
     }
   });
 
   client.on('message', msg => {
     if (msg.content === 'stfu') {
-      msg.reply('noe, you.');
+      msg.reply('no, you.');
     }
   });
 
